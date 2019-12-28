@@ -3,24 +3,6 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "force_destroy" {
-  description = "Delete all objects in bucket on destroy"
-  type        = bool
-  default     = false
-}
-
-variable "public_bucket" {
-  description = "Allow public read access to bucket"
-  type        = bool
-  default     = false
-}
-
-variable "versioned" {
-  description = "Version the bucket"
-  type        = bool
-  default     = false
-}
-
 variable "transfer_server_name" {
   description = "Transfer Server name"
   type        = string
