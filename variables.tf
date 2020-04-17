@@ -13,12 +13,12 @@ variable "transfer_server_name" {
   type        = string
 }
 
-variable "transfer_server_user_name" {
-  description = "User name for SFTP server"
-  type        = string
+variable "transfer_server_user_names" {
+  description = "User name(s) for SFTP server"
+  type        = list(string)
 }
 
-variable "transfer_server_ssh_key" {
-  description = "SSH Key for transfer server user"
-  type        = string
+variable "transfer_server_ssh_keys" {
+  description = "SSH Key(s) for transfer server user(s)"
+  type        = list(string)
 }
