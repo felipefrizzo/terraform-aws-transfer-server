@@ -3,6 +3,11 @@ variable "bucket_name" {
   type        = string
 }
 
+variable "bucket_arn" {
+  description = "The S3 bucket arn"
+  type        = string
+}
+
 variable "transfer_server_name" {
   description = "Transfer Server name"
   type        = string

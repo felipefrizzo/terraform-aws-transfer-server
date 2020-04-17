@@ -15,10 +15,19 @@ data "aws_iam_policy_document" "transfer_server_assume_policy" {
     effect = "Allow"
 
     actions = [
-      "s3:*",
+      "s3:DeleteObject",
+      "s3:DeleteObjectVersion",
+      "s3:GetBucketLocation",
+      "s3:GetObject",
+      "s3:GetObjectVersion",
+      "s3:ListBucket",
+      "s3:PutObject",
     ]
 
-    resources = ["*"]
+    resources = [
+      var.bucket_arn,
+      "${var.bucket_arn}/*"
+    ]
   }
 }
 
